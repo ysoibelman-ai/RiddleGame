@@ -12,7 +12,7 @@ class Riddle (ABC):
     def display (self):
         raise NotImplementedError
 
-    def check_answer(self,answer:str) -> bool
+    def check_answer(self,answer:str) -> bool:
         if answer == self.__correct_answer:
             return True
 
@@ -36,18 +36,18 @@ class MultipleChoiceRiddle(Riddle):
         if answer == self.check_answer:
             return True
 
-    def get_possible_answers():
-        pass
+    def get_possible_answers(self):
+        return list(self.possible_answers)
 
 class FourAnswerRiddle(MultipleChoiceRiddle):
 
     def get_type(self):
-        return "Four Answer Riddle"
+        return "multiple_4"
 
 class TwoAnswerRiddle(MultipleChoiceRiddle):
 
     def get_type(self):
-        return "Two Answer Riddle"
+        return "multiple_2"
 
 class Open_Riddle (Riddle):
 
