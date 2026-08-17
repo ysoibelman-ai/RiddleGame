@@ -35,8 +35,6 @@ class RiddleGame:
         self.__results.append(question_result)
             
 
-
-
     def print_summary (self, result: GameResult) -> None:
         print (result.__dict__)
         pass

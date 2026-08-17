@@ -13,11 +13,16 @@ class GameResult:
         self.__total_time = total_time
         self.__question_results = question_results
 
+
+
     def get_total_riddles(self) -> int:
         return len(self.__question_results)
+    
     def average_time_by_type(self) -> dict:
         pass
+
     def average_time_by_category(self) -> dict:
         pass
+
     def to_csv_row(self) -> list:
         pass
