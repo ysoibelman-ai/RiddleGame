@@ -3,7 +3,8 @@ class Player:
     def __init__(self,username:str):
         self.__username = username
 
-    def get_username (self):
+    @property
+    def username (self):
         return str(self.__username)
 
     def rename(self,new_username):

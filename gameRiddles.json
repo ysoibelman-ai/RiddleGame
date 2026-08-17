@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "I am a three-digit number. My tens digit is 5 more than my units digit, and my hundreds digit is 8 less than my tens digit. What number am I?",
+    "correct_answer": "194",
+    "type": "open",
+    "difficulty": "hard",
+    "category": "math"
+  },
+  {
+    "id": 2,
+    "question": "Does sound travel faster through water or through air?",
+    "correct_answer": "Water",
+    "type": "multiple_2",
+    "possible_answers": ["Water", "Air"],
+    "difficulty": "medium",
+    "category": "science"
+  },
+  {
+    "id": 3,
+    "question": "Which word becomes shorter when you add two letters to it?",
+    "correct_answer": "Short",
+    "type": "multiple_4",
+    "possible_answers": ["Short", "Long", "Small", "Brief"],
+    "difficulty": "medium",
+    "category": "english"
+  },
+  {
+    "id": 4,
+    "question": "Is the Equator a line of latitude or a line of longitude?",
+    "correct_answer": "Latitude",
+    "type": "multiple_2",
+    "possible_answers": ["Latitude", "Longitude"],
+    "difficulty": "easy",
+    "category": "geography"
+  },
+  {
+    "id": 5,
+    "question": "I was built in the 17th century out of white marble as a monumental tomb, and my name means 'Crown of Palaces'. What landmark am I?",
+    "correct_answer": "Taj Mahal",
+    "type": "multiple_4",
+    "possible_answers": ["Colosseum", "Taj Mahal", "Parthenon", "Alhambra"],
+    "difficulty": "medium",
+    "category": "history"
+  },
+  {
+    "id": 6,
+    "question": "I fall from the sky when cold, I flow in rivers when warm, and I vanish into air when hot. What am I?",
+    "correct_answer": "Water",
+    "type": "open",
+    "difficulty": "easy",
+    "category": "science"
+  },
+  {
+    "id": 7,
+    "question": "True or False: The word 'set' has more distinct dictionary definitions than almost any other English word.",
+    "correct_answer": "True",
+    "type": "multiple_2",
+    "possible_answers": ["True", "False"],
+    "difficulty": "hard",
+    "category": "english"
+  },
+  {
+    "id": 8,
+    "question": "I was an ancient civilization famous for building massive stone pyramids along the Nile River. Which civilization am I?",
+    "correct_answer": "Egypt",
+    "type": "open",
+    "difficulty": "easy",
+    "category": "history"
+  }
+]
