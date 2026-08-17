@@ -9,8 +9,6 @@ class Riddle (ABC):
         self.__difficulty = difficulty
         self.__category = category
 
-
-
     @property
     def id(self) -> int:
         return self.__id
@@ -30,7 +28,6 @@ class Riddle (ABC):
     def difficulty(self) -> str:
         return self.__difficulty
 
-    
     @abstractmethod
     def display (self):
         raise NotImplementedError
