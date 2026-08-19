@@ -1,5 +1,5 @@
 from abc import *
-import questionary
+import json
 
 class Riddle (ABC):
     def __init__(self, id:int, question:str, correct_answer:str, difficulty:str, category:str):
@@ -53,7 +53,6 @@ class MultipleChoiceRiddle(Riddle):
         print (f"Question: {self.question}")
         for index, answer in enumerate(self.__possible_answers, start =1):
             print (f"{index}.{answer} ")
-
 
     def check_answer(self,answer: int | str):
         correct_answer = self.correct_answer.lower()

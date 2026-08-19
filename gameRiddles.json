@@ -1,88 +1,104 @@
 [
   {
-    "id": 1,
-    "question": "I am a three-digit number. My tens digit is 5 more than my units digit, and my hundreds digit is 8 less than my tens digit. What number am I?",
-    "correct_answer": "194",
-    "type": "open",
-    "difficulty": "hard",
-    "category": "math"
+    "id": 11,
+    "question": "What is the largest planet in our solar system?",
+    "correct_answer": "Jupiter",
+    "possible_answers": [
+      "Saturn",
+      "Jupiter",
+      "Neptune",
+      "Uranus"
+    ],
+    "difficulty": "easy",
+    "category": "science"
   },
   {
-    "id": 2,
-    "question": "Does sound travel faster through water or through air?",
-    "correct_answer": "Water",
-    "type": "multiple_2",
-    "possible_answers": ["Water", "Air"],
+    "id": 12,
+    "question": "What is the chemical symbol for gold?",
+    "correct_answer": "Au",
     "difficulty": "medium",
     "category": "science"
   },
   {
-    "id": 3,
-    "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
-    "correct_answer": "An echo",
-    "type": "multiple_4",
-    "possible_answers": ["An echo", "A cloud", "A shadow", "A kite"],
+    "id": 13,
+    "question": "Which country is home to the Kangaroo?",
+    "correct_answer": "Australia",
+    "possible_answers": [
+      "South Africa",
+      "Brazil",
+      "Australia",
+      "India"
+    ],
     "difficulty": "easy",
-    "category": "riddles"
+    "category": "geography"
   },
   {
-    "id": 4,
-    "question": "A mother and father have four daughters, and each daughter has one brother. How many people are in the family in total?",
-    "correct_answer": "7",
-    "type": "open",
-    "difficulty": "medium",
-    "category": "logic"
-  },
-  {
-    "id": 5,
-    "question": "Which planet in our solar system rotates on its side with an axial tilt of about 98 degrees?",
-    "correct_answer": "Uranus",
-    "type": "multiple_4",
-    "possible_answers": ["Uranus", "Neptune", "Saturn", "Venus"],
-    "difficulty": "medium",
-    "category": "science"
-  },
-  {
-    "id": 6,
-    "question": "The person who makes it has no need of it; the person who buys it has no use for it. The person who uses it can neither see nor feel it. What is it?",
-    "correct_answer": "A coffin",
-    "type": "open",
-    "difficulty": "medium",
-    "category": "riddles"
-  },
-  {
-    "id": 7,
-    "question": "An electric train is traveling south at 60 mph and the wind is blowing north at 10 mph. Which direction does the smoke blow?",
-    "correct_answer": "There is no smoke",
-    "type": "multiple_2",
-    "possible_answers": ["There is no smoke", "North"],
-    "difficulty": "easy",
-    "category": "logic"
-  },
-  {
-    "id": 8,
-    "question": "If you multiply all the numbers on a standard smartphone dial pad together, what is the total?",
-    "correct_answer": "0",
-    "type": "multiple_4",
-    "possible_answers": ["0", "362880", "40320", "120"],
+    "id": 14,
+    "question": "What is 12 multiplied by 8?",
+    "correct_answer": "96",
     "difficulty": "easy",
     "category": "math"
   },
   {
-    "id": 9,
-    "question": "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?",
-    "correct_answer": "A map",
-    "type": "multiple_4",
-    "possible_answers": ["A map", "A globe", "A painting", "A dream"],
-    "difficulty": "easy",
-    "category": "riddles"
+    "id": 15,
+    "question": "The Great Wall of China is visible from space with the naked eye.",
+    "correct_answer": "False",
+    "possible_answers": [
+      "True",
+      "False"
+    ],
+    "difficulty": "medium",
+    "category": "general knowledge"
   },
   {
-    "id": 10,
-    "question": "What can bring back the dead, make you cry, make you laugh, make you young, is born in an instant, yet lasts a lifetime?",
-    "correct_answer": "A memory",
-    "type": "open",
+    "id": 16,
+    "question": "Who painted the Mona Lisa?",
+    "correct_answer": "Leonardo da Vinci",
+    "possible_answers": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet"
+    ],
+    "difficulty": "easy",
+    "category": "art"
+  },
+  {
+    "id": 17,
+    "question": "What is the smallest prime number?",
+    "correct_answer": "2",
+    "difficulty": "medium",
+    "category": "math"
+  },
+  {
+    "id": 18,
+    "question": "Which element makes up the majority of Earth's atmosphere?",
+    "correct_answer": "Nitrogen",
+    "possible_answers": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon Dioxide",
+      "Hydrogen"
+    ],
+    "difficulty": "medium",
+    "category": "science"
+  },
+  {
+    "id": 19,
+    "question": "In what year did the Titanic sink?",
+    "correct_answer": "1912",
     "difficulty": "hard",
-    "category": "riddles"
+    "category": "history"
+  },
+  {
+    "id": 20,
+    "question": "An octopus has three hearts.",
+    "correct_answer": "True",
+    "possible_answers": [
+      "True",
+      "False"
+    ],
+    "difficulty": "medium",
+    "category": "science"
   }
 ]

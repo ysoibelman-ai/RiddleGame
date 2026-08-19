@@ -5,6 +5,8 @@ from datetime import date
 from player import Player
 from results import GameResult, QuestionResult
 from riddles import Riddle, Open_Riddle, TwoAnswerRiddle, FourAnswerRiddle
+from riddleCrud import RiddleRipository
+import questionary
 
 class RiddleGame:
     def __init__(self, player: Player, riddles:list[Riddle], results: list[QuestionResult]):
@@ -13,9 +15,34 @@ class RiddleGame:
         self.__results = results
 
     @staticmethod
-    def start () -> GameResult:
-        player = Player(RiddleGame.create_player())
-        riddle_list = RiddleGame.create_riddle_list()
+    def start() -> GameResult:
+        option = questionary.select("What would you like to do?",choices = ["play game","manage riddles","view leader-board","exit"]).ask()
+
+        if option == "play game":
+            player = Player(RiddleGame.create_player())
+            return RiddleGame.play(player)
+        
+        elif option == "exit":
+            print("exiting game")
+
+        elif  option == "view leader-board":
+            RiddleGame.view_leader_board()
+
+        else:
+            manage_select = questionary.select("what would you like to manage?", choices = ["Add riddle","Show all riddles","Update riddle","Delete riddle","Return"]).ask()
+            if manage_select == "Add riddle":
+                RiddleRipository.add_riddle()
+            if manage_select == "Delete riddle":
+                RiddleRipository.delete_riddle()
+            if manage_select == "Show all riddles":
+                RiddleRipository.show_all_riddles()
+            if manage_select == "Return":
+                RiddleGame.start()
+            if manage_select == "Update riddle":
+                RiddleRipository.update_riddle()
+
+    def play (player:Player) -> GameResult:
+        riddle_list = RiddleRipository.load_riddles()
         game = RiddleGame(player,riddle_list,[])
 
         start_time = time.perf_counter()
@@ -64,21 +91,6 @@ class RiddleGame:
         username = input ("please enter a username: ")
         return username
 
-    @staticmethod
-    def create_riddle_list():
-        f = open("gameRiddles.json","r")
-        riddles = json.load(f)
-        riddle_list = []
-        f.close()
-        for riddle in riddles:
-            if riddle["type"] == "open":
-                riddle_list.append(Open_Riddle(riddle["id"],riddle["question"],riddle["correct_answer"],riddle["difficulty"],riddle["category"],))
-            elif riddle["type"] == "multiple_2":
-                riddle_list.append(TwoAnswerRiddle(riddle["id"],riddle["question"],riddle["correct_answer"],riddle["possible_answers"],riddle["difficulty"],riddle["category"],))
-            elif riddle["type"] == "multiple_4":
-                riddle_list.append(FourAnswerRiddle(riddle["id"],riddle["question"],riddle["correct_answer"],riddle["possible_answers"],riddle["difficulty"],riddle["category"],))
-        return riddle_list
-
     def add_to_leader_board(game_results):
         file = open("LeaderBoard.csv", "a+", newline="")
         file.seek(0)
@@ -89,9 +101,7 @@ class RiddleGame:
         writer.writerow(game_results.to_csv_row())
         file.close()
 
-class Main:
-    game_results = RiddleGame.start()
-    RiddleGame.print_summary(game_results)
-    RiddleGame.add_to_leader_board(game_results)
-    
-Main ()
+    def view_leader_board():
+        print ("Leader Baord\n")
+        file = open("LeaderBoard.csv","r")
+        print (file.read())

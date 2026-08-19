@@ -1,4 +1,3 @@
-
 class QuestionResult:
     def __init__(self,riddle_id: int, riddle_type: str, riddle_category: str, time_taken: float):
         self.__riddle_id = riddle_id
@@ -24,7 +23,6 @@ class GameResult:
         self.__date = date
         self.__total_time = total_time
         self.__question_results = question_results
-
 
     @property
     def total_time(self):
@@ -59,4 +57,3 @@ class GameResult:
 
     def to_csv_row(self) -> list:
         return [self.__username,self.__date,self.total_time,self.get_total_riddles()]
-        
