@@ -41,7 +41,6 @@ class RiddleGame:
             if manage_select == "Update riddle":
                 RiddleRipository.update_riddle()
 
-        
     def play (player:Player) -> GameResult:
         riddle_list = RiddleRipository.load_riddles()
         game = RiddleGame(player,riddle_list,[])
