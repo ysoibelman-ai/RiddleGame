@@ -67,3 +67,4 @@ class RiddleRipository:
         riddles = json.load(f)
         f.close()
         pprint(riddles, sort_dicts=False)
+    
