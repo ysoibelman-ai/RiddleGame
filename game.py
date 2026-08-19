@@ -5,6 +5,8 @@ from datetime import date
 from player import Player
 from results import GameResult, QuestionResult
 from riddles import Riddle, Open_Riddle, TwoAnswerRiddle, FourAnswerRiddle
+from riddleCrud import RiddleRipository
+import questionary
 
 class RiddleGame:
     def __init__(self, player: Player, riddles:list[Riddle], results: list[QuestionResult]):
@@ -13,8 +15,32 @@ class RiddleGame:
         self.__results = results
 
     @staticmethod
-    def start () -> GameResult:
-        player = Player(RiddleGame.create_player())
+    def start() -> GameResult:
+        option = questionary.select("What would you like to do?",choices = ["play game","manage riddles","view leader-board","exit"]).ask()
+
+        if option == "play game":
+            player = Player(RiddleGame.create_player())
+            return RiddleGame.play(player)
+        
+        elif option == "exit":
+            print("exiting game")
+
+        elif  option == "view leader-board":
+            RiddleGame.view_leader_board()
+
+        else:
+            manage_select = questionary.select("what would you like to manage?", choices = ["Add riddle","Show all riddles","Update riddle","Delete riddle","Return"]).ask()
+            if manage_select == "Add riddle":
+                RiddleRipository.add_riddle()
+            if manage_select == "Delete riddle":
+                RiddleRipository.delete_riddle()
+            if manage_select == "Show all riddles":
+                RiddleRipository.show_all_riddles()
+            if manage_select == "Return":
+                RiddleGame.start()
+
+        
+    def play (player:Player) -> GameResult:
         riddle_list = RiddleGame.create_riddle_list()
         game = RiddleGame(player,riddle_list,[])
 
@@ -89,9 +115,7 @@ class RiddleGame:
         writer.writerow(game_results.to_csv_row())
         file.close()
 
-class Main:
-    game_results = RiddleGame.start()
-    RiddleGame.print_summary(game_results)
-    RiddleGame.add_to_leader_board(game_results)
-    
-Main ()
+    def view_leader_board():
+        print ("Leader Baord\n")
+        file = open("LeaderBoard.csv","r")
+        print (file.read())

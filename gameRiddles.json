@@ -1,88 +1,88 @@
 [
   {
     "id": 1,
-    "question": "I am a three-digit number. My tens digit is 5 more than my units digit, and my hundreds digit is 8 less than my tens digit. What number am I?",
-    "correct_answer": "194",
-    "type": "open",
-    "difficulty": "hard",
+    "question": "What is 9 * 8?",
+    "correct_answer": "72",
+    "type": "multiple_4",
+    "possible_answers": ["64", "72", "81", "90"],
+    "difficulty": "easy",
     "category": "math"
   },
   {
     "id": 2,
-    "question": "Does sound travel faster through water or through air?",
-    "correct_answer": "Water",
-    "type": "multiple_2",
-    "possible_answers": ["Water", "Air"],
-    "difficulty": "medium",
-    "category": "science"
+    "question": "What is the capital of Japan?",
+    "correct_answer": "Tokyo",
+    "type": "open",
+    "difficulty": "easy",
+    "category": "geography"
   },
   {
     "id": 3,
-    "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
-    "correct_answer": "An echo",
-    "type": "multiple_4",
-    "possible_answers": ["An echo", "A cloud", "A shadow", "A kite"],
-    "difficulty": "easy",
-    "category": "riddles"
-  },
-  {
-    "id": 4,
-    "question": "A mother and father have four daughters, and each daughter has one brother. How many people are in the family in total?",
-    "correct_answer": "7",
-    "type": "open",
-    "difficulty": "medium",
-    "category": "logic"
-  },
-  {
-    "id": 5,
-    "question": "Which planet in our solar system rotates on its side with an axial tilt of about 98 degrees?",
-    "correct_answer": "Uranus",
-    "type": "multiple_4",
-    "possible_answers": ["Uranus", "Neptune", "Saturn", "Venus"],
+    "question": "Does sound travel faster through water than through air?",
+    "correct_answer": "Yes",
+    "type": "multiple_2",
+    "possible_answers": ["Yes", "No"],
     "difficulty": "medium",
     "category": "science"
   },
   {
-    "id": 6,
-    "question": "The person who makes it has no need of it; the person who buys it has no use for it. The person who uses it can neither see nor feel it. What is it?",
-    "correct_answer": "A coffin",
+    "id": 4,
+    "question": "What is the plural form of the word 'child'?",
+    "correct_answer": "children",
     "type": "open",
-    "difficulty": "medium",
-    "category": "riddles"
+    "difficulty": "easy",
+    "category": "english"
+  },
+  {
+    "id": 5,
+    "question": "Which ocean is the largest on Earth?",
+    "correct_answer": "Pacific Ocean",
+    "type": "multiple_4",
+    "possible_answers": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+    "difficulty": "easy",
+    "category": "geography"
+  },
+  {
+    "id": 6,
+    "question": "Which ancient civilization built the Pyramids of Giza?",
+    "correct_answer": "Egyptians",
+    "type": "multiple_4",
+    "possible_answers": ["Romans", "Greeks", "Egyptians", "Mayans"],
+    "difficulty": "easy",
+    "category": "history"
   },
   {
     "id": 7,
-    "question": "An electric train is traveling south at 60 mph and the wind is blowing north at 10 mph. Which direction does the smoke blow?",
-    "correct_answer": "There is no smoke",
-    "type": "multiple_2",
-    "possible_answers": ["There is no smoke", "North"],
-    "difficulty": "easy",
-    "category": "logic"
-  },
-  {
-    "id": 8,
-    "question": "If you multiply all the numbers on a standard smartphone dial pad together, what is the total?",
-    "correct_answer": "0",
-    "type": "multiple_4",
-    "possible_answers": ["0", "362880", "40320", "120"],
-    "difficulty": "easy",
+    "question": "What is 150 divided by 3?",
+    "correct_answer": "50",
+    "type": "open",
+    "difficulty": "medium",
     "category": "math"
   },
   {
-    "id": 9,
-    "question": "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?",
-    "correct_answer": "A map",
-    "type": "multiple_4",
-    "possible_answers": ["A map", "A globe", "A painting", "A dream"],
+    "id": 8,
+    "question": "Light travels faster than sound.",
+    "correct_answer": "True",
+    "type": "multiple_2",
+    "possible_answers": ["True", "False"],
     "difficulty": "easy",
-    "category": "riddles"
+    "category": "science"
+  },
+  {
+    "id": 9,
+    "question": "Which word is an antonym of 'ancient'?",
+    "correct_answer": "modern",
+    "type": "multiple_4",
+    "possible_answers": ["old", "modern", "historic", "distant"],
+    "difficulty": "medium",
+    "category": "english"
   },
   {
     "id": 10,
-    "question": "What can bring back the dead, make you cry, make you laugh, make you young, is born in an instant, yet lasts a lifetime?",
-    "correct_answer": "A memory",
+    "question": "Who was the prime minister of the United Kingdom during most of World War II?",
+    "correct_answer": "Winston Churchill",
     "type": "open",
     "difficulty": "hard",
-    "category": "riddles"
+    "category": "history"
   }
 ]
