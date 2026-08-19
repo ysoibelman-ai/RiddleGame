@@ -38,10 +38,12 @@ class RiddleGame:
                 RiddleRipository.show_all_riddles()
             if manage_select == "Return":
                 RiddleGame.start()
+            if manage_select == "Update riddle":
+                RiddleRipository.update_riddle()
 
         
     def play (player:Player) -> GameResult:
-        riddle_list = RiddleGame.create_riddle_list()
+        riddle_list = RiddleRipository.load_riddles()
         game = RiddleGame(player,riddle_list,[])
 
         start_time = time.perf_counter()
@@ -89,21 +91,6 @@ class RiddleGame:
     def create_player():
         username = input ("please enter a username: ")
         return username
-
-    @staticmethod
-    def create_riddle_list():
-        f = open("gameRiddles.json","r")
-        riddles = json.load(f)
-        riddle_list = []
-        f.close()
-        for riddle in riddles:
-            if riddle["type"] == "open":
-                riddle_list.append(Open_Riddle(riddle["id"],riddle["question"],riddle["correct_answer"],riddle["difficulty"],riddle["category"],))
-            elif riddle["type"] == "multiple_2":
-                riddle_list.append(TwoAnswerRiddle(riddle["id"],riddle["question"],riddle["correct_answer"],riddle["possible_answers"],riddle["difficulty"],riddle["category"],))
-            elif riddle["type"] == "multiple_4":
-                riddle_list.append(FourAnswerRiddle(riddle["id"],riddle["question"],riddle["correct_answer"],riddle["possible_answers"],riddle["difficulty"],riddle["category"],))
-        return riddle_list
 
     def add_to_leader_board(game_results):
         file = open("LeaderBoard.csv", "a+", newline="")
