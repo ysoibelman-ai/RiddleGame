@@ -1,6 +1,7 @@
 import questionary
 import json
 from riddles import *
+from validations import Validations
 
 
 class RiddleRipository:
@@ -87,8 +88,10 @@ class RiddleRipository:
         if riddles == [] or riddles == None:
             print ("There are no riddles to delete")
         else:
+
             id = int(input ("enter id of riddle you want to update: "))
             index = None
+
             for i in range (len(riddles)):
                 riddle = riddles[i]
                 if riddle["id"] == int(id):
@@ -97,15 +100,45 @@ class RiddleRipository:
             if index == None:
                 print ("there is no riddle with that id")
             else:
+
                 update_select = questionary.select("what field would you like to update",choices = list(riddle.keys())).ask()
+
                 if type(riddle[update_select]) == list:
-                    possible_answer_index = int(input("enter which answer you would like to change: "))
-                    riddle[update_select][possible_answer_index-1] = input ("enter new answer: ")
+                    possible_answer_index = int(input("enter which answer you would like to change: ")) -1
+                    if Validations.check_possible_answer_index(possible_answer_index,riddle):
+                        riddle[update_select][possible_answer_index] = input ("enter new answer: ")
+
+                elif update_select == "question":
+                    new_question = input("please enter the new qquestion: ")
+                    if Validations.check_question(new_question):
+                        riddle[update_select] = new_question+"?"
+
+                elif update_select == "id":
+                    new_id = int(input("Enter new id"))
+                    if Validations.check_id(int(new_id)):
+                        riddle[update_select] = new_id
+
+                elif update_select == "type":
+                    new_type = questionary.select("to what type would you like to change to?",choices = ["open","multiple_2","multiple_4"]).ask()
+                    riddle[update_select] = new_type
+
+                elif update_select == "category":
+                    new_category = questionary.select("to what category would you like to change to?",choices = ["Math","English","Geography","Science","History"]).ask()
+                    riddle[update_select] = new_category
+
+                elif update_select == "difficulty":
+                    new_difficulty = new_category = questionary.select("select new difficulty:",choices = ["easy","hard","medium"]).ask()
+                    riddle[update_select] = new_difficulty
+
+                elif update_select == "correct_answer":
+                    new_correct_answer = input ("enter new correct answer")
+                    if Validations.check_new_correct_answer(new_correct_answer,riddle):
+                        riddle[update_select] = new_correct_answer
+                    
                 else:
                     riddle[update_select] = input (f"enter new {update_select}: ")
                 
-                if update_select == "id":
-                   riddle[update_select] = int (riddle[update_select])
+
                 riddles[index] = riddle
                 RiddleRipository.save_riddles(riddles)
 

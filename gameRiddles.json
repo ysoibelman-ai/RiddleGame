@@ -1,104 +1,112 @@
 [
-  {
-    "id": 11,
-    "question": "What is the largest planet in our solar system?",
-    "correct_answer": "Jupiter",
-    "possible_answers": [
-      "Saturn",
-      "Jupiter",
-      "Neptune",
-      "Uranus"
-    ],
-    "difficulty": "easy",
-    "category": "science"
-  },
-  {
-    "id": 12,
-    "question": "What is the chemical symbol for gold?",
-    "correct_answer": "Au",
-    "difficulty": "medium",
-    "category": "science"
-  },
-  {
-    "id": 13,
-    "question": "Which country is home to the Kangaroo?",
-    "correct_answer": "Australia",
-    "possible_answers": [
-      "South Africa",
-      "Brazil",
-      "Australia",
-      "India"
-    ],
-    "difficulty": "easy",
-    "category": "geography"
-  },
-  {
-    "id": 14,
-    "question": "What is 12 multiplied by 8?",
-    "correct_answer": "96",
-    "difficulty": "easy",
-    "category": "math"
-  },
-  {
-    "id": 15,
-    "question": "The Great Wall of China is visible from space with the naked eye.",
-    "correct_answer": "False",
-    "possible_answers": [
-      "True",
-      "False"
-    ],
-    "difficulty": "medium",
-    "category": "general knowledge"
-  },
-  {
-    "id": 16,
-    "question": "Who painted the Mona Lisa?",
-    "correct_answer": "Leonardo da Vinci",
-    "possible_answers": [
-      "Vincent van Gogh",
-      "Pablo Picasso",
-      "Leonardo da Vinci",
-      "Claude Monet"
-    ],
-    "difficulty": "easy",
-    "category": "art"
-  },
-  {
-    "id": 17,
-    "question": "What is the smallest prime number?",
-    "correct_answer": "2",
-    "difficulty": "medium",
-    "category": "math"
-  },
-  {
-    "id": 18,
-    "question": "Which element makes up the majority of Earth's atmosphere?",
-    "correct_answer": "Nitrogen",
-    "possible_answers": [
-      "Oxygen",
-      "Nitrogen",
-      "Carbon Dioxide",
-      "Hydrogen"
-    ],
-    "difficulty": "medium",
-    "category": "science"
-  },
-  {
-    "id": 19,
-    "question": "In what year did the Titanic sink?",
-    "correct_answer": "1912",
-    "difficulty": "hard",
-    "category": "history"
-  },
-  {
-    "id": 20,
-    "question": "An octopus has three hearts.",
-    "correct_answer": "True",
-    "possible_answers": [
-      "True",
-      "False"
-    ],
-    "difficulty": "medium",
-    "category": "science"
-  }
+    {
+        "id": 1,
+        "question": "What is 12 \u05b3\u2014 8?",
+        "correct_answer": "96",
+        "type": "open",
+        "difficulty": "easy",
+        "category": "Math"
+    },
+    {
+        "id": 2,
+        "question": "What is 15 + 27?",
+        "correct_answer": "42",
+        "type": "multiple_4",
+        "possible_answers": [
+            "32",
+            "42",
+            "52",
+            "38"
+        ],
+        "difficulty": "easy",
+        "category": "Math"
+    },
+    {
+        "id": 3,
+        "question": "Which word is a synonym for 'happy'?",
+        "correct_answer": "Joyful",
+        "type": "multiple_2",
+        "possible_answers": [
+            "Sad",
+            "Joyful"
+        ],
+        "difficulty": "easy",
+        "category": "English"
+    },
+    {
+        "id": 4,
+        "question": "What is the past tense of the verb 'go'?",
+        "correct_answer": "Went",
+        "type": "open",
+        "difficulty": "easy",
+        "category": "English"
+    },
+    {
+        "id": 5,
+        "question": "What is the largest continent in the world?",
+        "correct_answer": "Asia",
+        "type": "multiple_4",
+        "possible_answers": [
+            "Africa",
+            "Europe",
+            "Asia",
+            "North America"
+        ],
+        "difficulty": "medium",
+        "category": "Geography"
+    },
+    {
+        "id": 6,
+        "question": "Which ocean is the largest?",
+        "correct_answer": "Pacific Ocean",
+        "type": "multiple_2",
+        "possible_answers": [
+            "Atlantic Ocean",
+            "Pacific Ocean"
+        ],
+        "difficulty": "easy",
+        "category": "Geography"
+    },
+    {
+        "id": 7,
+        "question": "What planet is known as the Red Planet?",
+        "correct_answer": "Mars",
+        "type": "open",
+        "difficulty": "easy",
+        "category": "Science"
+    },
+    {
+        "id": 8,
+        "question": "What gas do plants absorb from the atmosphere during photosynthesis?",
+        "correct_answer": "Carbon dioxide",
+        "type": "multiple_4",
+        "possible_answers": [
+            "Oxygen",
+            "Nitrogen",
+            "Hydrogen",
+            "Carbon dioxide"
+        ],
+        "difficulty": "medium",
+        "category": "Science"
+    },
+    {
+        "id": 9,
+        "question": "Who was the first president of the United States?",
+        "correct_answer": "George Washington",
+        "type": "open",
+        "difficulty": "medium",
+        "category": "History"
+    },
+    {
+        "id": 10,
+        "question": "In which year did World War II end?",
+        "correct_answer": "1945",
+        "type": "multiple_2",
+        "possible_answers": [
+            "1939",
+            "1945"
+        ],
+        "difficulty": "medium",
+        "category": "History"
+    }
 ]
