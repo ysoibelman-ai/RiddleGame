@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "question": "What is 12 \u05b3\u2014 8?",
+        "question": "What is 12 times 8?",
         "correct_answer": "96",
         "type": "open",
         "difficulty": "easy",

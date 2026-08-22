@@ -2,6 +2,7 @@ import questionary
 import json
 from riddles import *
 from validations import Validations
+import sys
 
 
 class RiddleRipository:
@@ -109,7 +110,7 @@ class RiddleRipository:
                         riddle[update_select][possible_answer_index] = input ("enter new answer: ")
 
                 elif update_select == "question":
-                    new_question = input("please enter the new qquestion: ")
+                    new_question = input("please enter the new question: ")
                     if Validations.check_question(new_question):
                         riddle[update_select] = new_question+"?"
 
@@ -119,8 +120,7 @@ class RiddleRipository:
                         riddle[update_select] = new_id
 
                 elif update_select == "type":
-                    new_type = questionary.select("to what type would you like to change to?",choices = ["open","multiple_2","multiple_4"]).ask()
-                    riddle[update_select] = new_type
+                    sys.exit("currently can't change type becuase that would require answer changes.\nplease except our apology")
 
                 elif update_select == "category":
                     new_category = questionary.select("to what category would you like to change to?",choices = ["Math","English","Geography","Science","History"]).ask()

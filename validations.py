@@ -1,4 +1,5 @@
 import json
+import sys
 
 class Validations:
 
@@ -13,9 +14,8 @@ class Validations:
         if new_id not in id_array:
             return True
         else:
-            raise ValueError ("This is is already in use")
-        
-    @staticmethod
+            sys.exit("sorry, you cannot change to this id because it is already in use")
+
     def check_question (question):
         f = open ("gameRiddles.json","r")
         riddles = json.load(f)
@@ -26,7 +26,7 @@ class Validations:
         if question not in question_array:
             return True
         else:
-            raise ValueError ("This question is already in use")
+            sys.exit("sorry you cannot add this question because it is already in use")
 
     @staticmethod
     def check_new_correct_answer (new_correct_answer:str, riddle) -> bool:
@@ -37,12 +37,12 @@ class Validations:
             if new_correct_answer in riddle["possible_answers"]:
                 return True
             else:
-                raise ValueError ("this answer is not one of the possible answers")
+                sys.exit ("sorry you cannot change to this new correct answer because it is not one of the possible answers")
 
     @staticmethod
     def check_possible_answer_index (possible_answer_index, riddle) -> bool:
         if riddle["possible_answers"][possible_answer_index] == riddle["correct_answer"]:
-            raise ValueError ("You cant change this answer because it is the correct answer")
+            sys.exit ("sorry you can't change this answer because it is the correct answer")
         return True
 
 
