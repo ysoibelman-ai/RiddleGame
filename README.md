@@ -1,9 +1,9 @@
-# RiddleGame
+RiddleGame
 
 This is a  terminal riddle game. You answer riddles, it times how long you take, and at the end it shows you a summary of how you did. There's also a leaderboard, and a menu where you can add/edit/delete your own riddles.
 
 
-## What it does
+What it does
 
 - Asks you for a username, then goes through all the riddles one by one
 - There are 3 types of riddles: open answer, 2-choice, and 4-choice
@@ -12,14 +12,13 @@ This is a  terminal riddle game. You answer riddles, it times how long you take,
 - Saves your result to a leaderboard file (`LeaderBoard.csv`)
 - Has a menu to manage riddles too — you can add new ones, update them, delete them, or just print them all out
 
-## How to run it
+How to run it
 
 1. In terminal write git clone https://github.com/ysoibelman-ai/RiddleGame.git
 2. Install  requirements: in terminal write: pip install -r requirements.txt
 3. Run game by writeing in terminal: python main.py
 
-
-## The menu
+The menu
 
 When you run it you get 4 options:
 
@@ -30,7 +29,7 @@ When you run it you get 4 options:
 
 If you pick multiple choice you can type either the answer itself or the number next to it, both work.
 
-## Files
+Files
 
 Here's  what each file does:
 
@@ -44,7 +43,7 @@ Here's  what each file does:
 - gameRiddles.json - where all the riddles are actually stored
 - LeaderBoard.csv - gets created/added to every time someone finishes a game
 
-## Riddle format
+Riddle format
 
 Riddles in the json file look like this:
 
