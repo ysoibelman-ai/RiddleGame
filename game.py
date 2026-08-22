@@ -102,6 +102,11 @@ class RiddleGame:
         file.close()
 
     def view_leader_board():
-        print ("Leader Baord\n")
         file = open("LeaderBoard.csv","r")
-        print (file.read())
+        content = file.read().strip()
+        if not content:
+            print ("Leader board is empty")
+        else:
+            print ("Leader Baord\n")
+            print (file.read())
+        file.close()
