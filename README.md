@@ -62,5 +62,11 @@ if it's multiple choice ("multiple_2" or "multiple_4") there's also a "possible_
 
 Things that still don't work
 
-- can't change a riddle's type once it's made, only the fields inside it — didn't have time to handle that yet
-- you need gameRiddles.json and LeaderBoard.csv to already exist in the folder for it to work
+1. can't change a riddle's type once it's made, only the fields inside it — didn't have time to handle that yet
+2. you need gameRiddles.json and LeaderBoard.csv to already exist in the folder for it to work
+
+Still need to build in the leader board menu
+
+1. sort by oldest and newest date
+2. sort by highest time
+3. sort by highest and lowest average time
