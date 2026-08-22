@@ -44,3 +44,10 @@ class Validations:
         if riddle["possible_answers"][possible_answer_index] == riddle["correct_answer"]:
             sys.exit ("sorry you can't change this answer because it is the correct answer")
         return True 
+
+    @staticmethod
+    def check_name (username):
+        if isinstance(username, str) and username.strip():
+            return True
+        else:
+            sys.exit("invalid username. username must be a non empty string")
