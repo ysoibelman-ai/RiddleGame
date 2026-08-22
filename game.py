@@ -16,7 +16,7 @@ class RiddleGame:
 
     @staticmethod
     def start() -> GameResult:
-        option = questionary.select("What would you like to do?",choices = ["play game","manage riddles","view leader-board","exit"]).ask()
+        option = questionary.select("What would you like to do?",choices = ["play game","manage riddles","Leader-Board","exit"]).ask()
 
         if option == "play game":
             player = Player(RiddleGame.create_player())
@@ -25,8 +25,14 @@ class RiddleGame:
         elif option == "exit":
             print("exiting game")
 
-        elif  option == "view leader-board":
-            RiddleGame.view_leader_board()
+        elif  option == "Leader-Board":
+            leader_board_options = questionary.select("What would you like to do?", choices = ["View leader-board","Sort by username","Sort by total time"]).ask()
+            if  leader_board_options == "View leader-board":
+                RiddleGame.view_leader_board()
+            elif leader_board_options == "Sort by username":
+                RiddleGame.sort_by_username()
+            elif leader_board_options == "Sort by total time":
+                RiddleGame.sort_by_total_time()
 
         else:
             manage_select = questionary.select("what would you like to manage?", choices = ["Add riddle","Show all riddles","Update riddle","Delete riddle","Return"]).ask()
@@ -102,11 +108,54 @@ class RiddleGame:
         file.close()
 
     def view_leader_board():
-        file = open("LeaderBoard.csv","r")
+        file = open("LeaderBoard.csv", "r")
         content = file.read().strip()
         if not content:
-            print ("Leader board is empty")
+            print("Leader board is empty")
         else:
-            print ("Leader Baord\n")
-            print (file.read())
+            print("Leader Board\n")
+            print(content)
         file.close()
+
+    def sort_by_username():
+        file = open("LeaderBoard.csv", "r")
+        reader = csv.reader(file)
+        rows = list(reader)
+        file.close()
+
+        if len(rows) <= 1:
+            print("Leader board is empty")
+        else:
+            header = rows[0]
+            players = rows[1:]
+            sorted_rows = sorted(players)
+
+            print("Leader Board (sorted by username)\n")
+            print(",".join(header))
+            for row in sorted_rows:
+                print(",".join(row))
+
+
+    def get_total_time(row):
+        time_string = row[2]
+        number_part = time_string.replace(" seconds", "")
+        return float(number_part)
+
+    def sort_by_total_time():
+        file = open("LeaderBoard.csv", "r")
+        reader = csv.reader(file)
+        rows = list(reader)
+        file.close()
+
+        if len(rows) <= 1:
+            print("Leader board is empty")
+        else:
+            header = rows[0]
+            players = rows[1:]
+            sorted_rows = sorted(players, key=RiddleGame.get_total_time)
+
+            print("Leader Board (sorted by total time)\n")
+            print(",".join(header))
+            for row in sorted_rows:
+                print(",".join(row))
+

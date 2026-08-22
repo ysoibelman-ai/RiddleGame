@@ -56,4 +56,4 @@ class GameResult:
         return dict(average_time_by_category_dict)
 
     def to_csv_row(self) -> list:
-        return [self.__username,self.__date,self.total_time,self.get_total_riddles()]
+        return [self.__username.lower(),self.__date,self.total_time,self.get_total_riddles()]

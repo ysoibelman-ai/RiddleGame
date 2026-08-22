@@ -9,7 +9,7 @@ What it does
 - There are 3 types of riddles: open answer, 2-choice, and 4-choice
 - You have to get each riddle right before it moves on to the next one
 - It times you on each riddle and shows your average time per riddle type and per category at the end
-- Saves your result to a leaderboard file (`LeaderBoard.csv`)
+- Saves your result to a leaderboard file (LeaderBoard.csv)
 - Has a menu to manage riddles too — you can add new ones, update them, delete them, or just print them all out
 
 How to run it
@@ -24,7 +24,7 @@ When you run it you get 4 options:
 
 - **play game** - asks for your username and starts the riddles
 - **manage riddles** - lets you add/update/delete/show riddles
-- **view leader-board** - shows everyone's scores so far
+- **Leader-Board** - opens another menu where you can view the leader-board, or view it sorted by username or by total time
 - **exit** - quits
 
 If you pick multiple choice you can type either the answer itself or the number next to it, both work.
@@ -47,7 +47,7 @@ Riddle format
 
 Riddles in the json file look like this:
 
-```json
+
 {
     "id": 1,
     "question": "What is 12 times 8?",
@@ -56,11 +56,17 @@ Riddles in the json file look like this:
     "difficulty": "easy",
     "category": "Math"
 }
-```
 
-if it's multiple choice (`multiple_2` or `multiple_4`) there's also a `possible_answers` list with the options.
 
-## Things that still don't work
+if it's multiple choice ("multiple_2" or "multiple_4") there's also a "possible_answers" list with the options.
 
-- can't change a riddle's type once it's made, only the fields inside it — didn't have time to handle that yet
-- you need `gameRiddles.json` and `LeaderBoard.csv` to already exist in the folder for it to work
+Things that still don't work
+
+1. can't change a riddle's type once it's made, only the fields inside it — didn't have time to handle that yet
+2. you need gameRiddles.json and LeaderBoard.csv to already exist in the folder for it to work
+
+Still need to build in the leader board menu
+
+1. sort by oldest and newest date
+2. sort by highest time
+3. sort by highest and lowest average time
