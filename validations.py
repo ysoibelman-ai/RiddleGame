@@ -14,7 +14,7 @@ class Validations:
         if new_id not in id_array:
             return True
         else:
-            sys.exit("sorry, you cannot change to this id because it is already in use")
+            sys.exit("sorry, this id is already in use")
 
     def check_question (question):
         f = open ("gameRiddles.json","r")
@@ -26,7 +26,7 @@ class Validations:
         if question not in question_array:
             return True
         else:
-            sys.exit("sorry you cannot add this question because it is already in use")
+            sys.exit("this question is already in use")
 
     @staticmethod
     def check_new_correct_answer (new_correct_answer:str, riddle) -> bool:
@@ -43,15 +43,4 @@ class Validations:
     def check_possible_answer_index (possible_answer_index, riddle) -> bool:
         if riddle["possible_answers"][possible_answer_index] == riddle["correct_answer"]:
             sys.exit ("sorry you can't change this answer because it is the correct answer")
-        return True
-
-
-            
-            
-
-
-    
-
-
-
-
+        return True 

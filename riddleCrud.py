@@ -29,8 +29,11 @@ class RiddleRipository:
     def add_riddle():
         type = questionary.select("please select what kind of riddle you would like to add:",choices = ["open","multiple_2","multiple_4"]).ask()
         print ("please enter the following fields:\n")
-        id = input("id: ")
+        id = int(input("id: "))
+        Validations.check_id(id)
+            
         question = input("question: ")
+        Validations.check_question(question)
 
         if type == "multiple_2":
             print("please enter 2 options for the answer one after another:\n")
